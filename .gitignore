@@ -1,0 +1,55 @@
+# Python stuff
+Pipfile.lock
+**/*.pyc
+venv/
+env/
+condaenv/
+.pytest_cache
+*.cprof
+*.egg-info
+
+# Sphinx docs
+_build
+docs/examples
+
+# Benchmarking
+benchmark.json
+.benchmarks/
+
+# IDE stuff
+.idea
+.spyderworkspace
+.vscode
+/.vs
+/AuTuMN.sln
+/AuTuMN.pyproj.user
+/AuTuMN.pyproj
+
+# Images
+*.png
+
+# Data
+*.db
+*.parquet
+*.csv
+
+# Runtime artifacts
+logs/
+*.log
+*ipynb_checkpoints*
+
+# Similarly, assume pickles are not to be committed
+*.pickle
+*.pkl
+
+# Python packaging stuff
+autumn.egg*
+build/
+dist/
+
+# Models runs and calibrations
+data/outputs
+
+# ignore Romain's remote output runs
+user/rragonnet/remote_run_outputs
+user/rragonnet/temp/

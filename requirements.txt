@@ -19,8 +19,8 @@ estival==0.4.4
 # Linux/OSX already installed via computegraph
 #-f https://whls.blob.core.windows.net/unstable/index.html
 #jax[cpu]===0.3.25; sys_platform == 'win32'
-jax==0.4.16
-jaxlib==0.4.16
+jax==0.4.24
+jaxlib==0.4.24
 
 # Interaction
 #jupyterlab==3.2.0
@@ -32,14 +32,14 @@ matplotlib
 seaborn
 plotly
 #cufflinks
-kaleido
+#kaleido
 
 # Numerical computing
 numpy>=1.21.5
 pandas==1.4.1
 openpyxl
 pyDOE
-numba
+#numba
 scipy==1.8.1
 networkx
 numpyro==0.10.1

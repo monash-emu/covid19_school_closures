@@ -14,34 +14,25 @@ build-backend = "setuptools.build_meta"
 "autumn.data" = ["**/*.csv", "**/*.parquet", "**/*.json"]
 
 dependencies = [
-    summerepi2==1.2.9
-    estival==0.4.4
-
-    jax==0.4.24
-    jaxlib==0.4.24
-
-    # Data visualization
-    matplotlib
-    seaborn
-    plotly
-
-    # Numerical computing
-    numpy>=1.21.5
-    pandas==1.4.1
-    openpyxl
-    pyDOE
-    scipy==1.8.1
-    networkx
-    numpyro==0.10.1
-    nevergrad==0.6.0
-
-    # Database and file access
-    pyarrow
-
-    # Utility
-    pyyaml
-    pydantic==1.10.9
-    statsmodels
+    "summerepi2==1.2.9",
+    "estival==0.4.4",
+    "jax==0.4.24",
+    "jaxlib==0.4.24",
+    "matplotlib",
+    "seaborn",
+    "plotly",
+    "numpy>=1.21.5",
+    "pandas==1.4.1",
+    "openpyxl",
+    "pyDOE",
+    "scipy==1.8.1",
+    "networkx",
+    "numpyro==0.10.1",
+    "nevergrad==0.6.0",
+    "pyarrow",
+    "pyyaml",
+    "pydantic==1.10.9
+    "statsmodels"
 ]
 
 [tool.black]

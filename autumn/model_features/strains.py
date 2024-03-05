@@ -1,6 +1,6 @@
 from typing import Dict, Union, Callable
 
-from summer import CompartmentalModel
+from summer2 import CompartmentalModel
 
 
 def broadcast_infection_flows_over_source(

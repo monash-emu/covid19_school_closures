@@ -9,12 +9,9 @@ import numpy
 import pandas as pd
 import numpy as np
 from typing import List, Union, Callable, Dict, Optional
-from responses import Call
 
-from autumn.core.utils.s3 import download_from_s3, list_s3, get_s3_client
 from autumn.core import registry
 from autumn.settings.folders import PROJECTS_PATH
-from autumn.core.utils import secrets
 
 
 def merge_dicts(
@@ -252,7 +249,7 @@ def find_latest_run_id(model, region, s3_client):
     return f"{model}/{region}/{latest_timestamp}/{commit}"
 
 
-def update_timeseries(TARGETS_MAPPING, df, file_path, *args):
+def update_timeseries(TARGETS_MAPPING, df, file_path):
     """
     Simple function to update timeseries.json files.
 
@@ -273,9 +270,6 @@ def update_timeseries(TARGETS_MAPPING, df, file_path, *args):
             targets[key]["values"] = list(temp_df[val])
     with open(file_path, "w") as f:
         json.dump(targets, f, indent=2)
-
-    if args:
-        secrets.write(file_path, *args)
 
 
 def create_date_index(base_datetime, df, datecol):

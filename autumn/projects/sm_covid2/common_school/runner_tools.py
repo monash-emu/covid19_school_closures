@@ -100,7 +100,7 @@ def multi_country_optimise(iso3_list: list, analysis: str = "main", num_workers:
 
         if logger:
             logger.info(f"Starting optimisation for {len(iso3_list)} countries...")
-        best_params = map_parallel(country_opti_wrapper, iso3_list, n_workers=parallel_opti_jobs)
+        best_params = map_parallel(country_opti_wrapper, iso3_list, n_workers=parallel_opti_jobs, mode="thread")
         if logger:
             logger.info("... optimisation complete.")
         
@@ -243,7 +243,7 @@ def run_full_analysis(
         best_p, _ = optimise_model_fit(bcm, num_workers=n_opti_workers, search_iterations=run_config['opti_budget'], suggested_start=suggested_start)
         return best_p
 
-    best_params = map_parallel(opti_func, lhs_samples_as_dicts, n_workers=int(2 * run_config['n_cores'] / n_opti_workers))  # oversubscribing
+    best_params = map_parallel(opti_func, lhs_samples_as_dicts, n_workers=int(2 * run_config['n_cores'] / n_opti_workers), mode="thread")  # oversubscribing
     opti_end = time()
     custom_print(logger, f"... optimisation completed in {round(opti_end - start_time)} seconds.")
 

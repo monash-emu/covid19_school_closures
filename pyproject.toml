@@ -16,6 +16,7 @@ dependencies = [
     "pyDOE",
     "scipy==1.8.1",
     "networkx",
+    "numba",
     "numpyro==0.10.1",
     "nevergrad==0.6.0",
     "pyarrow",

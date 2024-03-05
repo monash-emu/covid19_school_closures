@@ -31,7 +31,7 @@ dependencies = [
     "nevergrad==0.6.0",
     "pyarrow",
     "pyyaml",
-    "pydantic==1.10.9
+    "pydantic==1.10.9",
     "statsmodels"
 ]
 

@@ -9,7 +9,7 @@ from copy import copy
 import pandas as pd
 
 from autumn.projects.sm_covid2.common_school.calibration import get_bcm_object
-from summer.utils import ref_times_to_dti
+from summer2.utils import ref_times_to_dti
 
 from autumn.settings.folders import PROJECTS_PATH, INPUT_DATA_PATH
 from pathlib import Path

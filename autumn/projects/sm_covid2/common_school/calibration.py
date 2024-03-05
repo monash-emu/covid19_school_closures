@@ -6,7 +6,7 @@ import pandas as pd
 from jax import numpy as jnp
 
 import summer2
-from summer.utils import ref_times_to_dti
+from summer2.utils import ref_times_to_dti
 
 from estival import targets as est
 from estival import priors as esp

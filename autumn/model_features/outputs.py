@@ -1,4 +1,4 @@
-from summer import CompartmentalModel
+from summer2 import CompartmentalModel
 
 
 def get_strata(model: CompartmentalModel, strat_name: str):

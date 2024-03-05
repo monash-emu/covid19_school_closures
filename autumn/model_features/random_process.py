@@ -1,7 +1,6 @@
 from math import ceil, exp, log, sqrt, pi
 from typing import Tuple
 import numpy as np
-from summer.compute import ComputedValueProcessor
 
 from autumn.model_features.curve.scale_up import scale_up_function
 
@@ -86,18 +85,6 @@ class RandomProcess:
         log_likelihood = - log(self.noise_sd * sqrt(2. * pi)) - sum_of_squares / (2. * self.noise_sd**2 * len(process_values))
 
         return log_likelihood
-
-
-class RandomProcessProc(ComputedValueProcessor):
-    """
-    Calculate the values of the random process
-    """
-
-    def __init__(self, rp_time_variant_func):
-        self.rp_time_variant_func = rp_time_variant_func
-
-    def process(self, compartment_values, computed_values, time):
-        return self.rp_time_variant_func(time)
 
 
 def set_up_random_process(start_time, end_time, order, period):

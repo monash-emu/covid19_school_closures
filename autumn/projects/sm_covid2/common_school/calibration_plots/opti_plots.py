@@ -1,7 +1,7 @@
 from matplotlib import pyplot as plt 
 from math import ceil
 import os
-from summer.utils import ref_times_to_dti
+from summer2.utils import ref_times_to_dti
 import datetime
 from copy import copy
 

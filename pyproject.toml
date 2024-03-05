@@ -2,17 +2,6 @@
 name = "autumn"
 version = "1.0.0"
 requires-python = ">=3.10"
-
-[tool.setuptools]
-packages = ["autumn"]
-
-[build-system]
-requires = ["setuptools", "setuptools-scm"]
-build-backend = "setuptools.build_meta"
-
-[tool.setuptools.package-data]
-"autumn.data" = ["**/*.csv", "**/*.parquet", "**/*.json"]
-
 dependencies = [
     "summerepi2==1.2.9",
     "estival==0.4.4",
@@ -34,6 +23,16 @@ dependencies = [
     "pydantic==1.10.9",
     "statsmodels"
 ]
+
+[tool.setuptools]
+packages = ["autumn"]
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-data]
+"autumn.data" = ["**/*.csv", "**/*.parquet", "**/*.json"]
 
 [tool.black]
 line-length = 100
